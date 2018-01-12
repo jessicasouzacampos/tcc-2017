@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTCC2.Views.Principal">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="UaiSo" FontSize="25" HorizontalTextAlignment="Center" HeightRequest="100"></Label>
+
+            <StackLayout Orientation="Vertical">
+                <Button Text="Sicronizar" HorizontalOptions="FillAndExpand" Command="{Binding Sincronizar}"></Button>
+                <Button Text="Cidades" HorizontalOptions="FillAndExpand" Command="{Binding Cidades}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

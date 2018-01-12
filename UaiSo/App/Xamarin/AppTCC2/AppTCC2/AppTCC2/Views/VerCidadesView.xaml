@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Uai Sô"             
+             x:Class="AppTCC2.Views.VerCidadesView"
+             xmlns:local="clr-namespace:AppTCC2.CustomRenderer;assembly=AppTCC2">
+    <ContentPage.Content>
+        <!--Opção 1-->
+        <!--<StackLayout>
+            <BoxView StyleClass="HorizontalRule" />
+            <Label Text="Escolha uma cidade"></Label>
+            <StackLayout>
+                <ListView ItemsSource="{Binding Cidades}" SelectedItem="{Binding Cidade}" RowHeight="80" ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" >
+                                    <Label Text="{Binding Nome}" Font="Bold" FontSize="15"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        
+        </StackLayout>-->
+
+        <!--Opção 2-->       
+        <!--<StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"  Grid.ColumnSpan="2"  Grid.Column="0" ></Label>
+
+                <Button FontSize="20" Text="Itauna" Grid.Row="1" Grid.Column="0" ></Button>
+                <Button FontSize="20" Text="Oliveira" Grid.Row="1" Grid.Column="1" ></Button>
+                
+
+                <Button FontSize="20" Text="Carmo do Cajuru" Grid.Row="2" Grid.Column="0" ></Button>
+                <Button FontSize="20" Text="Carmo da Mata" Grid.Row="2" Grid.Column="1" ></Button>
+
+                <Button FontSize="20" Text="Divinópolis" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" ></Button>
+
+                <Label  Grid.Row="4"  Grid.ColumnSpan="2"  Grid.Column="0" ></Label>
+            </Grid>
+        </StackLayout>-->
+
+        <StackLayout>
+            <ListView x:Name="listView" CachingStrategy="RecycleElement" ItemSelected="listView_ItemSelected" ItemsSource="{Binding Cidades}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:NativeCell Name="{Binding Nome}" Category="{Binding Nome}" ImageFilename="{Binding ImageFilename}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

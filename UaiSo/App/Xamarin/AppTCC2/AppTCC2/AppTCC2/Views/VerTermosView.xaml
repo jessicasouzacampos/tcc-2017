@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTCC2.Views.VerTermosView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Escolha um termo"></Label>
+            <StackLayout>
+                <ListView ItemsSource="{Binding Termos}" SelectedItem="{Binding Termo}" RowHeight="80" ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" >
+                                    <Label Text="{Binding Nome}" Font="Bold" FontSize="15"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
